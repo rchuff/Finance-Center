@@ -1,0 +1,247 @@
+body{
+  background-color: #202F4D;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+h1,h2,h3{
+  color: #F9FEFF;
+}
+
+p,li{
+  color: black;
+}
+
+ul{
+  list-style: none;
+}
+
+
+
+/* Loading page with spinning icon */
+#opening{
+  background-image: url('./images/finance_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+#opening > div {
+  background-color: #B1C0CB;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.load{
+  height: 5em;
+  width: 5em;
+  margin: auto;
+  border-radius: 50%;
+  border: 10px solid;
+  border-color: #3DE6F1 #3DE6F1 #3DE6F1 gray;
+  animation: rotate 2s linear infinite;
+  box-shadow: 0 0 60px #3DE6F1;
+  margin-bottom: 2%;
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/* Main page display - switches to block display after page renders */
+#main{
+  overflow: hidden;
+  display: none;
+}
+
+#main section{
+  border-radius: 10px;
+  background-color: #2D3E5B;
+  text-align: center;
+}
+
+/* Sliding stock markets information */
+.markets-ul li{
+  padding: 0 5px;
+  font-size: 0.8em;
+}
+
+.markets-ul li span{
+  color: #F9FEFF;
+}
+
+/* Sliding animation for market information */
+.markets{
+  animation: slide 20s infinite ease-in-out;
+}
+
+.markets li {
+  display: inline;
+}
+@keyframes slide {
+  0%{
+    transform: translateX(100%);
+  }
+  35%{
+    transform: translateX(0);
+  }
+  65%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+#updates{
+  border-radius: 10px;
+  background-color: #2D3E5B;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#crypto{
+  padding-bottom: 25px;
+}
+.crypto-listing{
+  background-color: black;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+/* Stock/crypto listing coloring based on price */
+.green{
+  color: #5DE25D;
+}
+
+.red{
+  color: #C90B19;
+}
+
+/* Crypto section styling */
+.crypto-listing li span{
+  color: #F9FEFF;
+  font-size: 1.25em;
+}
+
+.crypto-ul li{
+  padding: 0 10px;
+}
+
+
+/* News section styling */
+.news-list{
+  max-height: 100vh;
+  max-width: 75%;
+  overflow-y: scroll;
+  overflow-x: auto;
+  margin: auto;
+  padding-bottom: 5vh;
+}
+
+.news-list ul{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.news-list > ul li{
+  color: black;
+  font-size: 1.15em;
+  padding: 2%;
+}
+
+/* Alternating background colors to differentiate articles */
+.news-list > ul li:nth-child(even){
+  background-color: #c9d6df;
+}
+
+.news-list > ul li:nth-child(odd){
+  background-color: #f0f5f9;
+}
+
+h4{
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+}
+
+li p{
+  font-size: 0.9em;
+  font-family: 'Playfair Display', serif;
+}
+
+button{
+  width: 15%;
+  height: 8vh;
+  background-color: #c9c9c9;
+  border-radius: 5px;
+  margin: 5vh;
+  font-size: 1.2em;
+}
+
+/* Job sections styling */
+/* Different backgrounds to differentiate job postings */
+.finance-jobs > ul li,.all-jobs > ul li{
+  border: solid 3px black;
+  width: 50%;
+  margin: auto;
+}
+
+.finance-jobs > ul li:nth-child(even), .all-jobs > ul li:nth-child(even){
+  background-color: #c9d6df;
+}
+
+.finance-jobs > ul li:nth-child(odd), .all-jobs > ul li:nth-child(odd){
+  background-color: #f0f5f9;
+}
+
+.all-jobs{
+  padding-bottom: 2%;
+}
+
+.finance-jobs h3, .all-jobs h3{
+  text-decoration: underline;
+}
+
+#jobs > p{
+  color: #F9FEFF;
+}
+
+/* Resources section styling */
+#resources{
+  background-color: black !important;
+  width: 100% !important;
+  border-radius: 0 !important;
+  margin: 0 0 !important;
+}
+
+.res-div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 2%;
+}
+
+a img{
+  max-height: 50px;
+  width: auto;
+}
