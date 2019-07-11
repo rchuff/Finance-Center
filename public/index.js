@@ -46,7 +46,7 @@ function stockScroll(data) {
     if (data[key].change > 0) {
       $('.markets ul').append(`<li class='green'><span>${data[key].title}: </span>${data[key].price} USD (+${data[key].change}%)</li>`);
     } else {
-      $('.markets ul').append(`<li class='red'><span>${data[key].title}: </span>${data[key].price} USD (-${data[key].change}%)</li>`);
+      $('.markets ul').append(`<li class='red'><span>${data[key].title}: </span>${data[key].price} USD (${data[key].change}%)</li>`);
     }
   }
 }
