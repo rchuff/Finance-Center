@@ -14,4 +14,4 @@ app.get('/', (req,res) => res.sendFile(__dirname + '/index.html'));
 app.use("/api", router);
 
 
-app.listen(3000, () => console.log('App running on port 3000'));
+app.listen(process.env.PORT || 3000, () => console.log('App running on port ' + process.env.PORT));
