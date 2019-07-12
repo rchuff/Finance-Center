@@ -27,10 +27,19 @@ ul{
   width: 100vw;
   position: absolute;
   z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 
@@ -48,20 +57,40 @@ ul{
   border-radius: 50%;
   border: 10px solid;
   border-color: #3DE6F1 #3DE6F1 #3DE6F1 gray;
-  animation: rotate 2s linear infinite;
-  box-shadow: 0 0 60px #3DE6F1;
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+  -webkit-box-shadow: 0 0 60px #3DE6F1;
+          box-shadow: 0 0 60px #3DE6F1;
   margin-bottom: 2%;
+}
+
+@-webkit-keyframes rotate {
+  0%{
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50%{
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100%{
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @keyframes rotate {
   0%{
-    transform: rotate(0);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   50%{
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
   100%{
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -89,33 +118,63 @@ ul{
 
 /* Sliding animation for market information */
 .markets{
-  animation: slide 20s infinite ease-in-out;
+  -webkit-animation: slide 20s infinite ease-in-out;
+          animation: slide 20s infinite ease-in-out;
 }
 
 .markets li {
   display: inline;
 }
-@keyframes slide {
+@-webkit-keyframes slide {
   0%{
-    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
   35%{
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   65%{
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100%{
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@keyframes slide {
+  0%{
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  35%{
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  65%{
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100%{
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 
 #updates{
   border-radius: 10px;
   background-color: #2D3E5B;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #crypto{
@@ -235,9 +294,14 @@ button{
 }
 
 .res-div{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 2%;
 }
 
